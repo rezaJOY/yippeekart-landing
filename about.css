@@ -1,0 +1,53 @@
+/* aboutUsTop */
+
+.aboutTileTextWrapper {
+  margin-bottom: 15px;
+}
+.aboutTileText {
+  color: #333f50;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+/* aboutUsBottom */
+.aboutUsBottom {
+  padding: 100px 0;
+}
+
+.aboutUsBottomInnerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.aboutUsBottomInnerContent img {
+  max-width: 80%;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.btnWrapper {
+  margin-top: 30px;
+}
+.arrowRightIcon svg {
+  display: flex;
+}
+
+@media (min-width: 1025px) {
+  .aboutUsBottomInnerContent {
+    flex-direction: row;
+    gap: 108px;
+  }
+  .aboutLeftContent,
+  .aboutRightContent {
+    width: calc(100% / 2 - 54px);
+  }
+  .aboutUsBottomInnerContent .imageWrapper {
+    margin-top: 135px;
+  }
+  .aboutUsBottomInnerContent img {
+    max-width: unset;
+  }
+}
