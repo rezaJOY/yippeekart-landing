@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color: #1000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1360px;
+    width: 100%;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.btn {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #DB1F26;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 11px 40px 11px 35px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.lead {
+    color: #555;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
+.navList {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+::marker {
+    color: red;
+}
+
+
+/* banner */
+.banner {
+    position: relative;
+}
+
+.bannerOverlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(101deg, rgba(219, 31, 38, 0.85) -83.52%, rgba(198, 10, 11, 0.85) 104.26%);
+}
+
+.banner img {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+}
+
+.bannerContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    max-width: 90%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.commonHeadingTitleTextWrapper{
+    margin-bottom: 15px;
+}
+.commonHeadingTitleText{
+    font-size: 38px;
+    line-height: 48px; 
+    font-weight: 700;
+    color: #FFF;
+}
+
+.subTitleText{
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #FFF;
+    text-align: center;
+}
+
+
+
+@media(min-width:768px) {
+    .commonHeadingTitleText{
+        font-size: 48px;
+        line-height: 58px; 
+    }
+    
+    .subTitleText{
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .btn{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+@media(min-width:1025px) {
+    .btn {
+        font-size: 16px;
+        line-height: 26px;
+        cursor: pointer;
+        padding: 15px 40px 15px 35px;
+    }
+
+    .bannerContent{
+        max-width: 850px;
+    }
+    .commonHeadingTitleText{
+        font-size: 58px;
+        line-height: 68px; 
+    }
+
+    .banner img {
+        height: 450px;
+    }
+}
