@@ -1,0 +1,160 @@
+.headerArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+/* brand logo */
+.brandLogoWrapper {
+  display: flex;
+}
+.brandLogo {
+  width: 180px;
+  height: 46px;
+}
+
+/* sidebar */
+
+.sidebar {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  background-color: #efefef;
+  transition: all 0.4s ease-in-out;
+  z-index: 90;
+}
+.sidebarOpen.sidebar {
+  right: 0;
+}
+.sidebarInnr {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+}
+
+.navbarList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navbarLink {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+/* hamburger icon */
+.hamburgerIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sidebarCloseIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.sidebarCloseIcon span {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .headerArea {
+    gap: 70px;
+    padding: 18px 0;
+  }
+
+  .mainMenu {
+    width: calc(100% - 70px);
+  }
+
+  /* sidebar */
+  .sidebar {
+    position: unset;
+    height: unset;
+    top: unset;
+    right: unset;
+    background-color: unset;
+    transition: unset;
+  }
+
+  .sidebarInnr {
+    height: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .navbarList {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* hamburger */
+  .hamburgerIcon {
+    display: none;
+  }
+  .sidebarCloseIcon {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .headerArea {
+    gap: 170px;
+    padding: 17px 0;
+  }
+
+  .navbarLink::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #db1f26;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .navbarLink {
+    transition: all 0.3s ease-in-out;
+  }
+  .navbarLink:hover {
+    color: #db1f26;
+  }
+  .navbarLink:hover:before {
+    width: 25px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.getAppBtnWrapper a {
+  text-decoration: none;
+}
